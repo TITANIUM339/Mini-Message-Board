@@ -100,6 +100,48 @@ main {
     background-color: #38bdf8;
 }
 
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #075985;
+}
+
+form > button {
+    background-color: #0ea5e9;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+form > button:hover {
+    cursor: pointer;
+    background-color: #38bdf8;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d4d4d4;
+}
+
 footer {
     padding: 20px;
     text-align: center;

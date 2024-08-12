@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <%- include("../components/head.ejs", { title: "Mini Message Board - New message" }) %>
+    <body>
+        <%- include("../components/header.ejs") %>
+        <main>
+            <section class="form-container">
+                <h1>Create new message</h1>
+                <form method="POST" action="/new">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="John Smith" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea type="text" name="message" id="message" placeholder="Hello!" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </main>
+        <%- include("../components/footer.ejs", { year: date.getFullYear() }) %>
+    </body>
+</html>
