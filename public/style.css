@@ -1,0 +1,119 @@
+body {
+    min-height: 100dvh;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    background-color: #fafafa;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+:any-link {
+    color: inherit;
+    text-decoration-line: none;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: #737373;
+}
+
+.link > a {
+    display: block;
+    background-color: #0a0a0a;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.link > a:hover {
+    background-color: #404040;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.messages {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: #075985;
+}
+
+.message {
+    word-break: break-all;
+}
+
+.open {
+    align-self: flex-end;
+}
+
+.open > a {
+    display: block;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: #0ea5e9;
+    color: white;
+}
+
+.open > a:hover {
+    background-color: #38bdf8;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+footer > :last-child {
+    transition: transform 200ms;
+}
+
+footer > :last-child:hover {
+    transform: scale(1.2);
+}
