@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+    <%- include("../components/head.ejs", { title: "Mini Messaging Board - Error" }) %>
+    <body>
+        <%- include("../components/header.ejs") %>
+        <main>
+            <section class="error">
+                <h1><%= error.name %>: <%= error.statusCode %></h1>
+                <p><%= error.message %></p>
+            </section>
+        </main>
+        <%- include("../components/footer.ejs", { year: date.getFullYear() }) %>
+    </body>
+</html>
