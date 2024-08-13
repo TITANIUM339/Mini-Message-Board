@@ -65,6 +65,16 @@ main {
     gap: 20px;
 }
 
+.no-messages {
+    text-align: center;
+    font-size: 1rem;
+    color: #075985;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .message-container {
     background-color: white;
     border-radius: 5px;
