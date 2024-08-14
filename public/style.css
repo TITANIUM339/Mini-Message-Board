@@ -86,13 +86,39 @@ main {
 }
 
 .message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-detail-container,
+.message-container {
     background-color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
+}
+
+.message-detail-container {
+    max-width: 1000px;
+    width: 100%;
+    height: min-content;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.message-detail-container > div > h1 {
+    font-size: 1.3rem;
+}
+
+.message-detail-container > p {
+    font-size: 1.2rem;
+}
+
+.details {
+    font-style: italic;
+    color: #a3a3a3;
 }
 
 .name {
