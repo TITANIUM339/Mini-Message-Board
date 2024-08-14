@@ -7,17 +7,17 @@
             <section class="messages">
                 <h1>Messages</h1>
                 <% if (messages.length) { %>
-                    <% messages.forEach((message, index) => { %>
+                    <% for (let index = messages.length - 1; index >= 0; index--) { %>
                     <div class="message-container">
                         <section class="content">
-                            <h2 class="name"><%= message.name %></h2>
-                            <p class="message"><%= message.text %></p>
+                            <h2 class="name"><%= messages[index].name %></h2>
+                            <p class="message"><%= messages[index].text %></p>
                         </section>
                         <div class="open">
                             <a href="/<%= index %>">Open</a>
                         </div>
                     </div>
-                    <% }); %>
+                    <% } %>
                 <% } else { %>
                     <section class="no-messages">
                         <h2>No messages yet. Be the first to send!</h2>
