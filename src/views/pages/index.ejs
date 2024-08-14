@@ -8,15 +8,15 @@
                 <h1>Messages</h1>
                 <% if (messages.length) { %>
                     <% for (let index = messages.length - 1; index >= 0; index--) { %>
-                    <div class="message-container">
-                        <section class="content">
-                            <h2 class="name"><%= messages[index].name %></h2>
-                            <p class="message"><%= messages[index].text %></p>
-                        </section>
-                        <div class="open">
-                            <a href="/<%= index %>">Open</a>
+                        <div class="message-container">
+                            <section class="content">
+                                <h2 class="name"><%= messages[index].name %></h2>
+                                <p class="message"><%= messages[index].text %></p>
+                            </section>
+                            <div class="open">
+                                <a href="/<%= index %>">Open</a>
+                            </div>
                         </div>
-                    </div>
                     <% } %>
                 <% } else { %>
                     <section class="no-messages">
