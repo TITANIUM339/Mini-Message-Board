@@ -27,7 +27,7 @@ function addMessage(name, text, date, location) {
     const newMessage = `"${name}","${text}","${date}","${location}"\n`;
 
     messages.push({ name, text, date, location });
-    
+
     fs.createWriteStream(filePath, { flags: "a" }).write(newMessage);
 }
 

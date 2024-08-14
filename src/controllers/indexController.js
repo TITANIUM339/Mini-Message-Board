@@ -4,7 +4,7 @@ export default {
     getIndex(req, res) {
         res.render("pages/index", {
             title: "Mini Message Board",
-            messages: getMessages()
+            messages: getMessages(),
         });
     },
     getMessage(req, res, next) {
@@ -17,5 +17,5 @@ export default {
         }
 
         res.render("pages/message", { message: messages[index] });
-    }
+    },
 };
