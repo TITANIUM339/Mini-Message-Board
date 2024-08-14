@@ -8,8 +8,8 @@ export default {
         res.render("pages/new");
     },
     async post(req, res, next) {
-        const name = req.body.name.trim();
-        const message = req.body.message.trim();
+        const name = req.body.name.trim().replaceAll(/\s+/g, " ");
+        const message = req.body.message.trim().replaceAll(/\s+/g, " ");
 
         if (!(message && name)) {
             next(
