@@ -22,14 +22,19 @@ export default {
             return;
         }
 
-        let data;
-
         try {
-            data = await (
+            const { country, city } = await (
                 await fetch(
                     `http://ip-api.com/json/${req.ip}?fields=country,city`,
                 )
             ).json();
+
+            addMessage(
+                name,
+                message,
+                format(new UTCDate(), "yyy-MM-dd HH:mm 'UTC'"),
+                country && city ? `${country}, ${city}` : "Unknown",
+            );
         } catch {
             next(
                 new CustomError(
@@ -40,15 +45,6 @@ export default {
             );
             return;
         }
-
-        const { country, city } = data;
-
-        addMessage(
-            name,
-            message,
-            format(new UTCDate(), "yyy-MM-dd HH:mm 'UTC'"),
-            country && city ? `${country}, ${city}` : "Unknown",
-        );
 
         res.redirect("/");
     },

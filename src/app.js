@@ -10,6 +10,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", path.join(import.meta.dirname, "views"));
+app.set("trust proxy", true);
 
 app.use((req, res, next) => {
     const date = new Date();
