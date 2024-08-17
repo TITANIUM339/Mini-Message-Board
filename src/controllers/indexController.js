@@ -12,7 +12,7 @@ export default {
         const messages = getMessages();
 
         if (isNaN(index) || index < 0 || index >= messages.length) {
-            next();
+            next("router");
             return;
         }
 

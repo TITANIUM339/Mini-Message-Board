@@ -22,8 +22,8 @@ app.use((req, res, next) => {
 });
 app.use(express.static(path.resolve("public")));
 app.use(express.urlencoded({ extended: true }));
-app.use("/", indexRouter);
 app.use("/new", newRouter);
+app.use("/", indexRouter);
 app.use((req, res, next) =>
     next(
         new CustomError(
