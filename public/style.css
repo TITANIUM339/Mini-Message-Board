@@ -57,7 +57,8 @@ main {
     justify-content: center;
 }
 
-.messages, .message-details {
+.messages,
+.message-details {
     max-width: 1000px;
     width: 100%;
     display: flex;
