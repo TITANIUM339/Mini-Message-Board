@@ -1,7 +1,6 @@
-import { addMessage } from "../models/messages.js";
-import { format } from "date-fns";
-import { UTCDate } from "@date-fns/utc";
+import { addMessage } from "../models/queries.js";
 import CustomError from "../helpers/CustomError.js";
+import { UTCDate } from "@date-fns/utc";
 
 export default {
     get(req, res) {
@@ -29,13 +28,15 @@ export default {
                 )
             ).json();
 
-            addMessage(
+            await addMessage(
                 name,
                 message,
-                format(new UTCDate(), "yyy-MM-dd HH:mm 'UTC'"),
+                new UTCDate(),
                 country && city ? `${country}, ${city}` : "Unknown",
             );
-        } catch {
+        } catch (error) {
+            console.error(error);
+            
             next(
                 new CustomError(
                     "Internal Server Error",
